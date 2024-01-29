@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <style>
+        .box {
+            width: 50px;
+            height: 25px;
+            float: left;
+            border: 1px solid gray;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        var doc = [
+            ["A", "B", "C", "D", "E",],
+            ["F", "G", "H", "I", "K",],
+            ["L", "M", "N", "O", "P",],
+            ["Q", "R", "S", "T", "U",],
+            ["V", "X", "Y", "J", "Z",]
+        ];
+
+
+        for (var i = 0; i < doc.length; i++) {
+            for (var j = 0; j < doc[i].length; j++) {
+                document.write("<div class='box' onclick='nut(" + i + "," + j + ")'><button>click</button></div>");
+            }
+            document.write("<div style='clear:both'></div>");
+        }
+
+        function nut(rowIndex, colIndex) {
+            alert(doc[rowIndex][colIndex]);
+        }
+    </script>
+
+</body>
+
+</html>
